@@ -1,16 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import logo from "@/assets/logo.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
-      {/* Background Decorations */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-glow/20 rounded-full blur-3xl animate-glow-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" />
-      
-      <div className="container mx-auto px-6 relative z-10">
+    <section className="relative min-h-screen flex flex-col bg-gradient-hero overflow-hidden">
+      {/* Header with Logo */}
+      <header className="relative z-20 container mx-auto px-6 py-6">
+        <div className="flex items-center">
+          <img src={logo} alt="WebBuilder Logo" className="w-10 h-10" />
+          <span className="ml-3 text-2xl font-bold text-primary-foreground">WebBuilder</span>
+        </div>
+      </header>
+
+      {/* Hero Content */}
+      <div className="flex-1 flex items-center justify-center relative">
+        {/* Background Decorations */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-glow/20 rounded-full blur-3xl animate-glow-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" />
+        
+        <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
           <div className="text-center lg:text-left space-y-8 animate-fade-in">
@@ -91,6 +102,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

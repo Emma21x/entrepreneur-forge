@@ -9,6 +9,7 @@ import {
   Phone,
   MapPin
 } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const footerLinks = {
@@ -53,9 +54,12 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                WebBuilder
-              </h3>
+              <div className="flex items-center mb-3">
+                <img src={logo} alt="WebBuilder Logo" className="w-8 h-8" />
+                <h3 className="ml-3 text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  WebBuilder
+                </h3>
+              </div>
               <p className="text-muted-foreground mt-2 max-w-sm">
                 Empowering entrepreneurs and small businesses to build stunning websites 
                 without the complexity.
